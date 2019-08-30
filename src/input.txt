@@ -1,0 +1,11 @@
+3
+Carrie Brownstein 3
+2 Banana 0.75
+1 Orange 1.25
+2 Milk 3.15
+Corin Tucker 2
+3 Banana 0.75
+2 Sponge 1.15
+Janet Weiss 1
+5 Salami 2.50
+
