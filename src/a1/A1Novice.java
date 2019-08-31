@@ -8,15 +8,34 @@ public class A1Novice {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		int total, loop;
-		
-		// Your code follows here.
+		int loop, loop_2, multiplier;
+		String first_name, last_name;
+		char first_init;
+		double item_cost, calculated_cost, final_cost = 0.0;
+
 		loop = scan.nextInt();
-//		loop = System.out.println(scan.next());
-		
+
 		for (int i = 0; i < loop; i++) {
-			System.out.println("here");
+			first_name = scan.next();
+			first_init = first_name.charAt(0);
+			last_name = scan.next();
+			loop_2 = scan.nextInt();
+
+			for (int j = 0; j < loop_2; j++) {
+//				System.out.println("START OF THE SECOND LOOP");
+				multiplier = scan.nextInt();
+//				System.out.println(multiplier);
+				scan.next();
+				item_cost = scan.nextDouble();
+//				System.out.println(item_cost);
+				calculated_cost = multiplier * item_cost;
+//				System.out.println(calculated_cost);
+				final_cost += calculated_cost;
+			}
+			System.out.printf(first_init + "." + " " + last_name + ": " + "%.2f\n", final_cost);
+			final_cost = 0.0;
 		}
+		scan.close();
 		
 	}
 }

@@ -9,3 +9,19 @@ Corin Tucker 2
 Janet Weiss 1
 5 Salami 2.50
 
+
+1
+Carrie Brownstein 3
+2 Banana 0.75
+1 Orange 1.25
+2 Milk 3.15
+
+
+			String name = scan.next();
+			first_init = name.charAt(0);
+			scan.next();
+//			loop_2 = 3 + (scan.nextInt() * 3);
+			System.out.println("SECOND");
+			System.out.println(first_init);
+			
+			
