@@ -22,14 +22,10 @@ public class A1Novice {
 			loop_2 = scan.nextInt();
 
 			for (int j = 0; j < loop_2; j++) {
-//				System.out.println("START OF THE SECOND LOOP");
 				multiplier = scan.nextInt();
-//				System.out.println(multiplier);
 				scan.next();
 				item_cost = scan.nextDouble();
-//				System.out.println(item_cost);
 				calculated_cost = multiplier * item_cost;
-//				System.out.println(calculated_cost);
 				final_cost += calculated_cost;
 			}
 			System.out.printf(first_init + "." + " " + last_name + ": " + "%.2f\n", final_cost);
