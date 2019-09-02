@@ -1,8 +1,10 @@
 package a1;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class A1Jedi {
 
@@ -17,6 +19,7 @@ public class A1Jedi {
 		
 		loop = scan.nextInt();
 		String[] fruit_list = new String[loop];
+		Set<String> dupl_check = new HashSet<>();
 		
 		for (int i = 0; i < loop; i++) {
 			fruit = scan.next();
@@ -37,15 +40,21 @@ public class A1Jedi {
 			for (int j = 0; j < loop_3; j++) {
 				num_fruit = scan.nextInt();
 				fruit = scan.next();
+				dupl_check.add(fruit);
 				int temp_fruit = shopping_data.get(fruit);
 				num_fruit += temp_fruit;
-				int temp_fruit_2 = fruit_count.get(fruit);
-				temp_fruit_2 += 1;
 				shopping_data.put(fruit, num_fruit);
-				fruit_count.put(fruit, temp_fruit_2);
 				temp_fruit = 0;
 				num_fruit = 0;
 			}
+			for (String item:dupl_check) {
+				int temp_fruit_2 = fruit_count.get(item);
+				temp_fruit_2 += 1;
+				fruit_count.put(item, temp_fruit_2);
+				temp_fruit_2 = 0;
+			}
+			dupl_check = new HashSet<>();
+			
 		}
 				
 		int cust_count;
